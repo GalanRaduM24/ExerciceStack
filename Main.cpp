@@ -111,7 +111,7 @@ int main() {
     */
 
     solutionOn(n, v);
-    
+    cout << endl;
     solutionOn2(n, v);
 
 
