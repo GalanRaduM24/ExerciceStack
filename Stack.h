@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#define NMAX 10
+#define NMAX 100
 
 template<typename T>
 class Stack {

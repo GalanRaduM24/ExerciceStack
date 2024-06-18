@@ -3,7 +3,9 @@
 #include "Stack.h"
 using namespace std;
 
-ifstream fin("test.txt");
+ifstream fin1("test1.txt");//suspect exists
+ifstream fin2("test2.txt");//suspect does not exist
+
 
 //Solution with complexity O(n)
 void solutionOn(int n, int v[100][100])
@@ -91,13 +93,33 @@ void solutionOn2(int n, int v[100][100]){
 
 int main() {
     int n, a, v[100][100];
-    fin >> n;
+
+    //Test 1
+    fin1 >> n;
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            fin >> v[i][j];
+            fin1 >> v[i][j];
         }
     }
+    solutionOn(n, v);
+    cout << endl;
+    solutionOn2(n, v);
+
+    cout << endl;
+
+    //Test 2
+    fin2 >> n;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            fin2 >> v[i][j];
+        }
+    }
+
+    solutionOn(n, v);
+    cout << endl;
+    solutionOn2(n, v);
 
     /*Input from keyboard
     cout << "Ener size of matrix: ";
@@ -109,11 +131,6 @@ int main() {
         }
     }
     */
-
-    solutionOn(n, v);
-    cout << endl;
-    solutionOn2(n, v);
-
-
+   
     return 0;
 }
