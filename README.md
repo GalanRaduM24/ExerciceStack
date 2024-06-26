@@ -5,5 +5,11 @@ This program identifies a "suspect" in a given n x n matrix representing interac
 
 ## Running the Program
 1. Ensure a C++ compiler is installed.
-2. Compile the program: g++ -o main Main.cpp.
-3. Run the program: ./main.
+2. Compile the program:
+```
+g++ -o main Main.cpp
+```
+5. Run the program:
+```
+./main
+```
